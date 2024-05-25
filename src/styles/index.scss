@@ -17,15 +17,20 @@ body {
     border-color: #3b3b3b;
     user-select: none;
 }
-
+a {
+    @apply cursor-pointer;
+}
 canvas {
     touch-action: none;
 }
-.wrapper {
-    @apply mx-auto max-w-screen-2xl px-4;
-}
 
 .scrim-max-width {
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    position: relative;
+    max-width: 1120px;
+}
+.screen-max-width {
     margin-inline-start: auto;
     margin-inline-end: auto;
     position: relative;
@@ -102,7 +107,7 @@ canvas {
     }
 
     .hiw-video {
-        @apply absolute h-[90%] w-[95%] overflow-hidden rounded-[56px];
+        @apply absolute h-[90%] w-[95%] rounded-[56px] lg:overflow-hidden;
     }
 
     .hiw-text-container {
